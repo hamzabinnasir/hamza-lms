@@ -1,0 +1,126 @@
+.editLecturePage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.editLecturePageHead {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.editLecturePageHead h1 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+}
+
+.editLecturePageHead p {
+    color: var(--color-text-secondary);
+}
+
+.editLectureContainer {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+}
+
+.remLectDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-lg);
+}
+
+.editlectureForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.starIcon {
+    font-size: var(--font-size-sm) !important;
+    color: var(--color-error);
+    margin-left: var(--spacing-xs);
+}
+
+.checkboxGroup {
+    flex-direction: row !important;
+    align-items: center;
+    gap: var(--spacing-sm) !important;
+}
+
+.checkboxGroup input {
+    width: auto;
+}
+
+.checkboxGroup label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Upload Progress Styles */
+.uploadProgressContainer {
+    margin-top: var(--spacing-sm);
+    width: 100%;
+    background-color: var(--color-background);
+    border-radius: var(--radius-full);
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+}
+
+.uploadProgressBar {
+    height: 100%;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4, #10b981);
+    background-size: 200% 100%;
+    animation: gradientShift 2s linear infinite;
+    transition: width 0.3s ease-out;
+    border-radius: var(--radius-full);
+}
+
+.uploadProgressText {
+    position: absolute;
+    right: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: -100% 0%;
+    }
+}
+
+.btnType1:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: var(--color-text-secondary);
+}
+
+.thumbnailUpload {
+    position: relative;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--color-background);
+}
+
+.thumbnailUpload:hover {
+    border-color: var(--color-primary);
+    background: rgba(79, 70, 229, 0.05);
+}

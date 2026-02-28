@@ -1,0 +1,212 @@
+.singleCoursePage {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    color: var(--color-text);
+    padding-bottom: 4rem;
+}
+
+.singleCourseContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.singleCourseHead {
+    margin-bottom: 2rem;
+}
+
+.singleCourseHead h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.courseMeta {
+    display: flex;
+    gap: 2rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.courseMeta p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.highlight {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.singleCourseContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.courseMainColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.singleCourseDescription h2,
+.lecturesHeader h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.singleCourseDescription p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.lecturesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.lectureCount {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.lecturesListContainer {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.lecSingList {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+
+.lecSingList.clickable {
+    cursor: pointer;
+}
+
+.lecSingList.clickable:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-surface-hover);
+}
+
+.lecSingList.locked {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: var(--color-bg);
+}
+
+.lectureInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.playIcon {
+    color: var(--color-primary);
+}
+
+.lockIcon {
+    color: var(--color-text-secondary);
+}
+
+.previewBadge {
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Sidebar */
+.courseSidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.coursePreviewCard {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.videoBox {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+}
+
+.videoBox video,
+.videoBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previewCardContent {
+    padding: 1.5rem;
+}
+
+.lecturePrice {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+.fullWidth {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.courseFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.courseFeatures p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.courseFeatures p::before {
+    content: "✓";
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .singleCourseContent {
+        grid-template-columns: 1fr;
+    }
+
+    .courseSidebar {
+        position: static;
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}

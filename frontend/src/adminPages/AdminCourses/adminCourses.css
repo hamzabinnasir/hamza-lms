@@ -1,0 +1,104 @@
+.coursesPage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.coursesPageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coursesPageHeader h1 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+}
+
+.coursesPageHeader button {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.courseTableContainer {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.courseListHeader {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-surface-hover);
+    border-bottom: 1px solid var(--color-border);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.courseRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+    transition: background-color var(--transition-fast);
+}
+
+.courseRow:last-child {
+    border-bottom: none;
+}
+
+.courseRow:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.courseTitle {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.coursePrice {
+    color: var(--color-text-secondary);
+}
+
+.statusBadge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+}
+
+.statusBadge.published {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+.statusBadge.draft {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--color-error);
+}
+
+.noCourses {
+    padding: var(--spacing-xl);
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+
+    .courseListHeader,
+    .courseRow {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .courseListHeader p:nth-child(3),
+    .courseListHeader p:nth-child(2),
+    .courseRow .coursePrice,
+    .courseRow .courseStatus {
+        display: none;
+    }
+}

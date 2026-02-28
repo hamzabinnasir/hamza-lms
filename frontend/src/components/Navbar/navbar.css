@@ -1,0 +1,137 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    background-color: var(--color-bg);
+    z-index: 100;
+}
+
+#navbar img {
+    object-fit: cover;
+}
+
+#navbar h3 {
+    font-weight: 600;
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+}
+
+.navProfileContainer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.navProfileContainer img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    border: 2px solid var(--color-border);
+    transition: border-color var(--transition-fast);
+}
+
+.navProfileContainer img:hover {
+    border-color: var(--color-primary);
+}
+
+.themeToggle {
+    cursor: pointer;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-full);
+    transition: background-color var(--transition-fast);
+}
+
+.themeToggle:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.accountBtnContainer {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.navListContainer {
+    position: absolute;
+    top: 70px;
+    right: var(--spacing-2xl);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    width: 250px;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+}
+
+.navListContainer h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+}
+
+.navListsBox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.navListsBox li {
+    list-style: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
+    transition: background-color var(--transition-fast);
+}
+
+.navListsBox li:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-primary);
+}
+
+.dashboardBtnDiv {
+    margin-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-md);
+}
+
+#dashboardBtn {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        padding: var(--spacing-md);
+    }
+
+    .accountBtnContainer button {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+    }
+
+    .navListContainer {
+        right: var(--spacing-md);
+        width: 220px;
+    }
+}

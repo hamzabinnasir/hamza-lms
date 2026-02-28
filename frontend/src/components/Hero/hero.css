@@ -1,0 +1,108 @@
+.heroSection {
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.heroContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.heroContainer h1 {
+    font-size: var(--font-size-4xl);
+    color: var(--color-text);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.heroContainer p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+}
+
+.searchBarContainer {
+    display: flex;
+    gap: var(--spacing-sm);
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--color-surface);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-fast);
+}
+
+.searchBarContainer:focus-within {
+    box-shadow: none;
+    border-color: var(--color-border);
+}
+
+.searchInputWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: var(--spacing-md);
+}
+
+.searchIcon {
+    color: var(--color-text-secondary);
+    margin-right: var(--spacing-sm);
+}
+
+.searchBarContainer input {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+}
+
+.searchBarContainer input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#searchBtn {
+    border-radius: var(--radius-full);
+    padding: var(--spacing-sm) var(--spacing-xl);
+}
+
+#exploreBtn {
+    margin-top: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .heroContainer h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .searchBarContainer {
+        flex-direction: column;
+        background: none;
+        border: none;
+        box-shadow: none;
+        gap: var(--spacing-md);
+    }
+
+    .searchInputWrapper {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    #searchBtn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+.CoursesPage {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coursesHeader {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.coursesHeader h1 {
+    font-size: var(--font-size-3xl);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.coursesHeader p {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+}
+
+.userCoursesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.noCoursesFound {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-2xl);
+    color: var(--color-text-secondary);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}

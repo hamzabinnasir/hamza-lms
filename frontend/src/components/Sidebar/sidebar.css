@@ -1,0 +1,68 @@
+.adminSideBar {
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    padding-top: 80px;
+    /* To account for Navbar */
+}
+
+.adminSideBar .link {
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+}
+
+.adminSideBar li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.adminSideBar li:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-text);
+}
+
+.activeLink li {
+    background-color: var(--color-primary);
+    color: white !important;
+}
+
+.activeLink li:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.sidebarIcon {
+    font-size: var(--font-size-xl);
+}
+
+@media (max-width: 768px) {
+    .adminSideBar {
+        width: 70px;
+        padding: var(--spacing-md) var(--spacing-xs);
+        padding-top: 80px;
+        align-items: center;
+    }
+
+    .adminSideBar p {
+        display: none;
+    }
+
+    .adminSideBar li {
+        justify-content: center;
+        padding: var(--spacing-md) var(--spacing-xs);
+    }
+}
